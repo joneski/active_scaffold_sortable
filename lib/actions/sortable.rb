@@ -13,9 +13,11 @@ module ActiveScaffold::Actions
       
       sortable_plugin_path = File.join(RAILS_ROOT, 'vendor', 'plugins', sortable_plugin_name, 'views')
       
-      if base.respond_to?(:generic_view_paths) && ! base.generic_view_paths.empty?
+      if base.respond_to?(:prepend_view_path)
+        base.prepend_view_path(sortable_plugin_path)
+      elsif base.respond_to?(:generic_view_paths) && ! base.generic_view_paths.empty?
         base.generic_view_paths.insert(0, sortable_plugin_path)
-      else  
+      else
         config.inherited_view_paths << sortable_plugin_path
       end
       
@@ -62,7 +64,7 @@ module ActiveScaffold::Actions
         "#{active_scaffold_tbody_id}", 
         {
           :tag => "tr", 
-          :url => {:action => :reorder, :controller => params[:controller] },
+          :url => {:action => :reorder, :controller => params[:controller], :eid => params[:eid] },
           :format => active_scaffold_config.sortable.format
         }
       ]
