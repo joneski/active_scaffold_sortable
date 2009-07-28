@@ -1,6 +1,6 @@
 h1. Drag-Drop Sortable for ActiveScaffold
 
-Currently, this plugin is not compatible with rails 2.1, due to some outstanding compatibility issues with ActiveScaffold.
+This plugin has been updated to be compatible with both rails 2.2 and 2.3, as well as having the ability to work inside a nested_scaffold
 
 h2. Overview
 
@@ -13,7 +13,7 @@ You'll need at least ActiveScaffold 1.1.1 to use this, and probably rails 2.0
 
 <pre>
 # rails 2.0
-git clone git://github.com/activescaffold/active_scaffold_sortable.git vendor/plugins/active_scaffold_sortable
+git clone git://github.com/joneski/active_scaffold_sortable.git vendor/plugins/active_scaffold_sortable
 </pre>
 
 h2. Usage
@@ -84,19 +84,9 @@ end
 ...
 </pre>
 
-h2. Support
-
-If you have issues installing the plugin, search / post to the "Active Scaffold ":http://groups.google.com/group/activescaffold forum or "Create an issue":http://code.google.com/p/activescaffold/issues/list
-
 h2. Contributing
 
 Fork, hack, push, and request a pull:
 
-http://github.com/activescaffold/active_scaffold_sortable/
+http://github.com/joneski/activescaffold/active_scaffold_sortable/
 
-h2. Author
-
-Contact me:
-<pre>
-  Tim Harper - irb(main):001:0> ( 'tim_see_harperATgmail._see_om'.gsub('_see_', 'c').gsub('AT', '@') )
-</pre>
